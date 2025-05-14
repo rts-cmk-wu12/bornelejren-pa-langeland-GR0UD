@@ -1,0 +1,10 @@
+@use "./utils/variables";
+@use "./utils/mixins";
+@use "./base/reset";
+@use "./base/typography";
+@use "./components/header";
+@use "./components/footer";
+@use "./layouts/layout";
+@use "./pages/home";
+
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap");
