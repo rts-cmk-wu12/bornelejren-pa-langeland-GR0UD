@@ -1,9 +1,42 @@
 import Layout from "../components/Layout";
+import Slider from "../components/slider";
+import Gallery from "../components/Gallery";
+
+const sliderData = [
+  {
+    img: "/images/kids1.jpg",
+    heading: "Et sted med hjerte",
+    text: "Vi giver børnene en tryg ferieoplevelse fyldt med minder.",
+    link: "/tilmeld-sponsor",
+  },
+  {
+    img: "/images/kids2.jpg",
+    heading: "Fællesskab og leg",
+    text: "Sammenhold og sjov er i centrum hos Børnelejren.",
+    link: "/tilmeld-sponsor",
+  },
+  {
+    img: "/images/kids3.jpg",
+    heading: "Støt et barn i dag",
+    text: "Din støtte giver udsatte børn muligheden for et pusterum.",
+    link: "/tilmeld-sponsor",
+  },
+];
+
+const galleryData = [
+  { src: "/images/pool.jpg", alt: "Swimmingpool" },
+  { src: "/images/playground1.jpg", alt: "Legeplads med forhindringsbane" },
+  { src: "/images/kitchen1.jpg", alt: "Fælleskøkken" },
+  { src: "/images/kitchen2.jpg", alt: "Spiseplads" },
+  { src: "/images/house1.jpg", alt: "Hovedbygning i solen" },
+  { src: "/images/house2.jpg", alt: "Hovedbygning fra siden" },
+  { src: "/images/playground2.jpg", alt: "Sandbane og klatrestativ" },
+];
 
 export default function Home() {
   return (
     <Layout>
-      <section className="welcome-section">
+      <section className='welcome-section'>
         <h1>Velkommen</h1>
 
         <p>
@@ -51,6 +84,49 @@ export default function Home() {
           et velfortjent lejrophold på Søgård.
         </p>
       </section>
+      <Slider sliderElement={sliderData} time={6} />
+
+      <section className='impact-section'>
+        <div className='container'>
+          <h2>Sådan gør vi en forskel</h2>
+          <p>
+            Vores arbejde gør en konkret forskel for børn, der har allermest
+            brug for tryghed og nærvær.
+          </p>
+          <ul className='impact-list'>
+            <li>
+              <span className='icon'>🌱</span>
+              <span className='text'>
+                Børn får en pause fra en svær hverdag
+              </span>
+            </li>
+            <li>
+              <span className='icon'>🏡</span>
+              <span className='text'>
+                Trygge rammer i naturskønne omgivelser
+              </span>
+            </li>
+            <li>
+              <span className='icon'>🤝</span>
+              <span className='text'>
+                Mulighed for nye venskaber og netværk
+              </span>
+            </li>
+            <li>
+              <span className='icon'>🎨</span>
+              <span className='text'>
+                Masser af aktiviteter, leg og kreativitet
+              </span>
+            </li>
+            <li>
+              <span className='icon'>🍽️</span>
+              <span className='text'>Fælles måltider og socialt samvær</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <Gallery galleryElement={galleryData} />
     </Layout>
   );
 }

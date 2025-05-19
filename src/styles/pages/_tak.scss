@@ -1,0 +1,65 @@
+@use "../utils/variables" as *;
+
+.tak {
+  padding: 4rem 1rem;
+  background-color: #fffaf9;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: $primary-color;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    li {
+      background-color: #fff;
+      outline: 2px dotted $primary-color;
+      outline-offset: -1px;
+      padding: 1.25rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.25s ease;
+      width: 100%;
+      display: flex;
+      gap: 0.25rem;
+
+      &:hover {
+        transform: translateY(-5px);
+        background-color: $primary-color;
+        outline-color: white;
+        color: white;
+
+        strong {
+          color: white;
+        }
+      }
+
+      strong {
+        color: $primary-color;
+        font-weight: 700;
+        transition: color 0.25s ease;
+      }
+    }
+  }
+
+  // Empty state
+  > p:last-of-type {
+    font-style: italic;
+    color: #999;
+  }
+}

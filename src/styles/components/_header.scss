@@ -2,8 +2,8 @@
 
 .site-header {
   background-color: $primary-color;
-  outline: 2px dotted #d0000b;
-  outline-offset: -1px;
+  outline: 5px dotted $primary-color;
+  outline-offset: -3px;
 
   .header-wrapper {
     display: flex;
@@ -48,6 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $primary-color;
     gap: 2rem;
 
     ul {
@@ -70,7 +71,7 @@
           bottom: -4px;
           left: 0;
           width: 0;
-          border-bottom: 2px dotted white;
+          border-bottom: 2px dashed white;
           transition: width 0.2s ease-in-out;
         }
 
@@ -86,28 +87,44 @@
   }
 
   .burger {
-    display: none;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    display: none;
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
     z-index: 1001;
+    position: relative;
 
     span {
-      display: block;
-      height: 3px;
+      position: absolute;
       width: 100%;
+      height: 3px;
       background: white;
       border-radius: 2px;
       transition: all 0.3s ease;
     }
 
+    span:nth-child(1) {
+      top: 6px;
+    }
+
+    span:nth-child(2) {
+      top: 14px;
+    }
+
+    span:nth-child(3) {
+      top: 22px;
+    }
+
     &.open span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
+      transform: rotate(45deg);
+      top: 14px;
     }
 
     &.open span:nth-child(2) {
@@ -115,7 +132,8 @@
     }
 
     &.open span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
+      transform: rotate(-45deg);
+      top: 14px;
     }
   }
 
@@ -123,14 +141,13 @@
     .burger {
       display: flex;
       position: absolute;
-      right: 1rem;
+      right: 1.5rem;
     }
 
     nav {
       display: none;
       flex-direction: column;
       align-items: flex-start;
-      background: #d0000b;
       margin-top: 2rem;
       padding: 1.5rem;
       width: 100%;
@@ -138,7 +155,7 @@
       position: absolute;
       top: 80%;
       left: 0;
-      outline: 2px dotted #d0000b;
+      outline: 2px dotted $primary-color;
       outline-offset: -1px;
     }
 
