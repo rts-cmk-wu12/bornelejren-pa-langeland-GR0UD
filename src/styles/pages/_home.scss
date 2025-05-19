@@ -1,0 +1,83 @@
+@use "../utils/_variables.scss" as *;
+
+.welcome-section {
+  padding: 2.5rem 1.5rem;
+
+  h1 {
+    color: $primary-color;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #333;
+    br {
+      margin: 1rem 0;
+    }
+  }
+}
+
+.impact-section {
+  padding: 4rem 1rem;
+  text-align: center;
+
+  h2 {
+    font-size: 3rem;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #444;
+  }
+
+  .impact-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      background-color: rgba(#c4c4c412, 0.5);
+      color: $primary-color;
+      outline: 4px dotted rgba(rgb(255, 255, 255), 1);
+      outline-offset: -2.5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: all 0.25s ease;
+      padding: 2.5rem 1.5rem;
+      cursor: default;
+
+      &:hover {
+        transform: scale(1.12);
+        background-color: $primary-color;
+        color: white;
+        outline-color: $primary-color;
+        border-color: #a30000;
+      }
+
+      .icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .text {
+        font-size: 1rem;
+        line-height: 1.2;
+      }
+    }
+  }
+}

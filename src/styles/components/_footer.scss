@@ -1,0 +1,99 @@
+@use "../utils/_variables.scss" as *;
+
+.site-footer {
+  background-color: $primary-color;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: 5px dotted $primary-color;
+  outline-offset: -3px;
+
+  .footer-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .footer-content {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 2rem 1rem;
+      text-align: left;
+
+      .footer-brand {
+        text-align: center;
+
+        img {
+          width: 100px;
+          margin-bottom: 1rem;
+        }
+
+        .social-heading {
+          margin-bottom: 0.5rem;
+          font-weight: bold;
+          color: #fff;
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          font-size: 1.5rem;
+
+          a {
+            color: #fff;
+            transition: opacity 0.2s;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+
+      .footer-col {
+        margin: 1rem;
+
+        h4 {
+          font-size: 1.25rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+          color: #fff;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            margin: 0.4rem 0;
+
+            a {
+              text-decoration: none;
+              color: #fff;
+
+              &:hover {
+                text-decoration: underline;
+                text-decoration-color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      width: 100%;
+
+      border-top: 1.5px dotted rgba(255, 255, 255, 0.2);
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #fff;
+    }
+  }
+}
